@@ -1,0 +1,7 @@
+version: '3.7'
+
+services:
+
+  phpmyadmin:
+    restart: "no"
+    entrypoint: ["echo", "Service phpmyadmin disabled"]
