@@ -2,13 +2,13 @@
 Common docker services for projects with traefik network
 
 ## Include:
- - traefik:v2.1 dashboard http://traefik.${HOST_IP}.xip.io
- - mariadb:10.4 with phpmyadmin http://phpmyadmin.${HOST_IP}.xip.io
- - elasticsearch:7.5.2 with sense UI http://sense.${HOST_IP}.xip.io/app/sense
+ - traefik:v2.1 dashboard http://traefik.${HOST_IP}.nip.io
+ - mariadb:10.4 with phpmyadmin http://phpmyadmin.${HOST_IP}.nip.io
+ - elasticsearch:7.5.2 with sense UI http://sense.${HOST_IP}.nip.io/app/sense
    use elasticsearch:9200 as elastic server
- - maildev user interface http://maildev.${HOST_IP}.xip.io
- - rabbitmq:3.8 manageable with UI http://rabbitmq.${HOST_IP}.xip.io
- - redis:5 with UI redis-commander http://redis-commander.${HOST_IP}.xip.io
+ - maildev user interface http://maildev.${HOST_IP}.nip.io
+ - rabbitmq:3.8 manageable with UI http://rabbitmq.${HOST_IP}.nip.io
+ - redis:5 with UI redis-commander http://redis-commander.${HOST_IP}.nip.io
  - sftp with login `sftp -P 2222 ${FTP_USER}@$0.0.0.0`
  
 _**${HOST_IP}** and **${FTP_USER}** set in `.env` file_

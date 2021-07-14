@@ -14,7 +14,7 @@ services:
       - "--entrypoints.web.address=:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`traefik.${HOST_IP}.xip.io`)"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.${HOST_IP}.nip.io`)"
       - "traefik.http.routers.traefik.entrypoints=web"
       - "traefik.http.services.traefik.loadbalancer.server.port=8080"
       - "traefik.docker.network=traefik"
@@ -49,7 +49,7 @@ services:
       PMA_HOST: mysql
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.phpmyadmin.rule=Host(`phpmyadmin.${HOST_IP}.xip.io`)"
+      - "traefik.http.routers.phpmyadmin.rule=Host(`phpmyadmin.${HOST_IP}.nip.io`)"
       - "traefik.http.routers.phpmyadmin.entrypoints=web"
       - "traefik.http.services.phpmyadmin.loadbalancer.server.port=80"
       - "traefik.http.services.phpmyadmin.loadbalancer.passhostheader=true"
@@ -87,7 +87,7 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.sense.rule=Host(`sense.${HOST_IP}.xip.io`)"
+      - "traefik.http.routers.sense.rule=Host(`sense.${HOST_IP}.nip.io`)"
       - "traefik.http.routers.sense.entrypoints=web"
       - "traefik.http.services.sense.loadbalancer.server.port=5601"
       - "traefik.http.services.sense.loadbalancer.passhostheader=true"
@@ -99,7 +99,7 @@ services:
     restart: on-failure
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.rabbitmq.rule=Host(`rabbitmq.${HOST_IP}.xip.io`)"
+      - "traefik.http.routers.rabbitmq.rule=Host(`rabbitmq.${HOST_IP}.nip.io`)"
       - "traefik.http.routers.rabbitmq.entrypoints=web"
       - "traefik.http.services.rabbitmq.loadbalancer.server.port=15672"
       - "traefik.http.services.rabbitmq.loadbalancer.passhostheader=true"
@@ -114,7 +114,7 @@ services:
     restart: on-failure
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.maildev.rule=Host(`maildev.${HOST_IP}.xip.io`)"
+      - "traefik.http.routers.maildev.rule=Host(`maildev.${HOST_IP}.nip.io`)"
       - "traefik.http.routers.maildev.entrypoints=web"
       - "traefik.http.services.maildev.loadbalancer.server.port=80"
       - "traefik.http.services.maildev.loadbalancer.passhostheader=true"
@@ -135,7 +135,7 @@ services:
       - .env
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.redis-commander.rule=Host(`redis-commander.${HOST_IP}.xip.io`)"
+      - "traefik.http.routers.redis-commander.rule=Host(`redis-commander.${HOST_IP}.nip.io`)"
       - "traefik.http.routers.redis-commander.entrypoints=web"
       - "traefik.http.services.redis-commander.loadbalancer.server.port=8081"
       - "traefik.http.services.redis-commander.loadbalancer.passhostheader=true"
